@@ -32,17 +32,23 @@ namespace Dijkstra
             this.btnSolve = new System.Windows.Forms.Button();
             this.dgGraph = new System.Windows.Forms.DataGridView();
             this.dgPath = new System.Windows.Forms.DataGridView();
+            this.numericStartVertex = new System.Windows.Forms.NumericUpDown();
+            this.numericEndVertex = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgGraph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPath)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericStartVertex)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericEndVertex)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSolve
             // 
             this.btnSolve.Location = new System.Drawing.Point(12, 12);
             this.btnSolve.Name = "btnSolve";
-            this.btnSolve.Size = new System.Drawing.Size(75, 30);
+            this.btnSolve.Size = new System.Drawing.Size(75, 41);
             this.btnSolve.TabIndex = 1;
-            this.btnSolve.Text = "Тык";
+            this.btnSolve.Text = "Ищем путь";
             this.btnSolve.UseVisualStyleBackColor = true;
             this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
             // 
@@ -75,19 +81,55 @@ namespace Dijkstra
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgPath.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPath.ColumnHeadersVisible = false;
-            this.dgPath.Location = new System.Drawing.Point(109, 12);
+            this.dgPath.Location = new System.Drawing.Point(207, 12);
             this.dgPath.Name = "dgPath";
             this.dgPath.ReadOnly = true;
             this.dgPath.RowHeadersVisible = false;
             this.dgPath.RowTemplate.Height = 25;
-            this.dgPath.Size = new System.Drawing.Size(679, 30);
+            this.dgPath.Size = new System.Drawing.Size(581, 30);
             this.dgPath.TabIndex = 5;
+            // 
+            // numericStartVertex
+            // 
+            this.numericStartVertex.Location = new System.Drawing.Point(104, 12);
+            this.numericStartVertex.Name = "numericStartVertex";
+            this.numericStartVertex.Size = new System.Drawing.Size(42, 23);
+            this.numericStartVertex.TabIndex = 6;
+            // 
+            // numericEndVertex
+            // 
+            this.numericEndVertex.Location = new System.Drawing.Point(152, 12);
+            this.numericEndVertex.Name = "numericEndVertex";
+            this.numericEndVertex.Size = new System.Drawing.Size(42, 23);
+            this.numericEndVertex.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(104, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 15);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Начало";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(152, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 15);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Конец";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.numericEndVertex);
+            this.Controls.Add(this.numericStartVertex);
             this.Controls.Add(this.dgPath);
             this.Controls.Add(this.dgGraph);
             this.Controls.Add(this.btnSolve);
@@ -95,7 +137,10 @@ namespace Dijkstra
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgGraph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPath)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericStartVertex)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericEndVertex)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -103,6 +148,10 @@ namespace Dijkstra
         private System.Windows.Forms.Button btnSolve;
         private System.Windows.Forms.DataGridView dgGraph;
         private System.Windows.Forms.DataGridView dgPath;
+        private System.Windows.Forms.NumericUpDown numericStartVertex;
+        private System.Windows.Forms.NumericUpDown numericEndVertex;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

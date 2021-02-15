@@ -22,6 +22,12 @@ namespace Dijkstra
         {
             InitializeComponent();
             InitGraphView();
+
+            numericStartVertex.Maximum = Graph.GetLength(0) - 1;
+            numericEndVertex.Maximum = Graph.GetLength(0) - 1;
+
+            numericStartVertex.Value = 0;
+            numericEndVertex.Value = 4;
         }
 
         private void InitGraphView()
@@ -41,7 +47,7 @@ namespace Dijkstra
         private void btnSolve_Click(object sender, EventArgs e)
         {
             Dijkstra solver = new(Graph);
-            var path = solver.FindBestRoute(0, 4);
+            var path = solver.FindBestRoute((int)numericStartVertex.Value, (int)numericEndVertex.Value);
 
             dgPath.ColumnCount = path.Length;
             dgPath.Rows.Add();
